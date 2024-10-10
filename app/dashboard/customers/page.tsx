@@ -1,5 +1,6 @@
 import { fetchFilteredCustomers } from '@/app/lib/data';
 import CustomersTable from '@/app/ui/customers/table';
+import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
