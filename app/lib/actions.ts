@@ -141,7 +141,7 @@ export async function updateInvoice(
   prevState: State,
   formData: FormData,
 ) {
-  console.log('ok');
+  
   const validatedFields = UpdateInvoice.safeParse({
     customerId: formData.get('customerId'),
     amount: formData.get('amount'),
@@ -234,6 +234,11 @@ export async function deleteCustomer(id: string) {
     return { message: 'Database Error: Failed to Delete Customer.' };
   }
 }
+
+// export async function seeCustomerInfo(id: string) {
+//   // throw new Error('Failed to Delete Customer');
+  
+// }
 
 export async function authenticate(
   prevState: string | undefined,

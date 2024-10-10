@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
 import { FormattedCustomersTable } from '@/app/lib/definitions';
-import { CreateCustomer, DeleteCustomer, DeleteInvoice, UpdateCustomer, UpdateInvoice } from '../customers/buttons';
+import { CreateCustomer, DeleteCustomer, UpdateCustomer, SeeCustomer } from '../customers/buttons';
 
 export default async function CustomersTable({
   customers,
@@ -116,6 +116,7 @@ export default async function CustomersTable({
                         <div className="flex justify-end gap-3">
                           <UpdateCustomer id={customer.id} />
                           <DeleteCustomer id={customer.id} />
+                          <SeeCustomer id={customer.id} />
                         </div>
                       </td>
                     </tr>

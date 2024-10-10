@@ -1,7 +1,8 @@
-import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
+import { PencilIcon, PlusIcon, TrashIcon, EyeIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { deleteInvoice } from '@/app/lib/actions';
 import { deleteCustomer } from '@/app/lib/actions';
+import { seeCustomerInfo } from '@/app/lib/actions';
 
 export function CreateCustomer() {
   return (
@@ -62,3 +63,15 @@ export function DeleteCustomer({ id }: { id: string }) {
     </form>
   );
 }
+
+export function SeeCustomer({ id }: { id: string }) {
+  return (
+    <Link
+      href={`/dashboard/customers/${id}/see_more`}
+      className="rounded-md border p-2 hover:bg-gray-100"
+    >
+      <EyeIcon className="w-5" />
+    </Link>
+  );
+}
+
